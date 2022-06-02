@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TodoController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +14,7 @@ use App\Http\Controllers\TodoController;
 |
 */
 
-Route::get('/', [TodoController:: class, 'index'])->name('todo');
+Auth::routes();
+
+Route::get('/', [App\Http\Controllers\DashboardController::class, 'index'])->name('home');
+
